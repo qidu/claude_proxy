@@ -95,3 +95,15 @@ claude "你好，世界！"
     npx wrangler dev
     ```
     这将在本地 `http://localhost:8787` 启动一个开发服务器。
+3.  **启动Claude Code**
+    在另一个终端窗口中
+    ```bash
+    export ANTHROPIC_BASE_URL=http://localhost:8787
+    export API_TIMEOUT_MS=600000
+    export ANTHROPIC_MODEL=haiku
+    export ANTHROPIC_SMALL_FAST_MODEL=haiku
+    ```
+    然后执行
+    ```bash
+    claude "hi"
+    ```
