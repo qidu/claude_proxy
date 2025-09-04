@@ -124,13 +124,13 @@ export default {
             return new Response("Method Not Allowed", { status: 405 });
         }
 
-        // const apiKey = request.headers.get('x-api-key');
-        // if (!apiKey) {
+        const apiKey = request.headers.get('x-api-key');
+        if (!apiKey) {
         //    return new Response(JSON.stringify({ error: 'The "x-api-key" header is missing.' }), {
         //        status: 401,
         //        headers: { 'Content-Type': 'application/json' },
         //    });
-        // }
+        }
 
         try {
             const claudeRequest: ClaudeMessagesRequest = await request.json();
